@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply antialiased text-gray-900;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply py-24;
+  }
+  
+  .section-title {
+    @apply text-base text-indigo-600 font-semibold tracking-wide uppercase;
+  }
+  
+  .section-heading {
+    @apply mt-2 text-3xl font-extrabold text-gray-900 sm:text-4xl;
+  }
+  
+  .section-description {
+    @apply mt-4 max-w-2xl text-xl text-gray-500 mx-auto;
+  }
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
